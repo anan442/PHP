@@ -1,0 +1,390 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto; /* 置中 */
+    
+}
+
+.card {
+    
+    flex-basis: calc(33.333% - 20px);
+    min-width: 300px; /* Set a minimum width for the cards */
+    background-color: #ffffff;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px; /* 為按鈕添加弧形邊框 */
+}
+
+.card img {
+    width: 70%;
+    height: auto;
+}
+
+.btn {
+    display: inline-block;
+    color: #ffffff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 20px;
+    border-radius: 10px; /* 為按鈕添加弧形邊框 */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+p {
+    text-align: center;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1em 0;
+    width: 100%; /* 確保header佔滿全寬 */
+    box-sizing: border-box; /* 包括內邊距和邊框在內的總寬度 */
+    margin: 0; /* 移除默認的外邊距 */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* 添加內邊距，避免內容緊貼邊緣 */
+    box-sizing: border-box; /* 包括內邊距和邊框在內的總寬度 */
+    
+}
+
+.header-left h1 {
+    margin: 0;
+}
+
+.header-left h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-left h1 a:link,
+.header-left h1 a:visited,
+.header-left h1 a:hover,
+.header-left h1 a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.header-center ul, .header-right ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+.header-center ul li, .header-right ul li {
+    margin: 0 1em;
+}
+
+.header-center ul li a, .header-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section {
+    padding: 2em 0;
+    background-color: white;
+    margin: 1em 0;
+}
+
+.section:nth-child(even) {
+    background-color: #e9ecef;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box; /* 包括內邊距和邊框在內的總寬度 */
+    flex: 1 0 auto; /* 讓 container 元素可以彈性地填滿可用空間 */
+}
+
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+.toggle-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    #loginForm {
+        width: 70%;
+    }
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header-center ul, .header-right ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-center ul li, .header-right ul li {
+        margin: 0.5em 0;
+    }
+    
+    .modal-body img{
+        width: 100px;
+        height: auto;
+    }
+
+    .toggle-button {
+        display: block;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .header-center, .header-right {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header-center.active, .header-right.active  {
+        display: flex;
+    }
+
+    #favoriteButton {
+        padding: 8px 8px; /* 縮小按鈕內邊距 */
+        font-size: 12px; /* 縮小文字大小 */
+    }
+
+    #favoriteButton:before {
+        font-size: 12px; /* 縮小心形符號大小 */
+    }
+
+    #loginForm input[type="file"]{
+        width: 90%;
+    }
+}
+
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px; /* 添加弧形邊框 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+    padding: 20px;
+    margin: auto; /* 將表單置於頁面中央 */
+    max-width: 500px; /* 設定表單最大寬度 */
+    min-width: 100px; /* 新增的最小寬度 */
+    min-height: 76vh; /* 設定最小高度為視窗的高度 */
+    box-sizing: border-box;
+    max-height: 50%;
+}
+
+#loginForm label {
+    display: block; /* 使標籤成為塊級元素 */
+    margin-bottom: 10px; /* 添加標籤下方的間距 */
+    font-weight: bold; /* 加粗標籤文字 */
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="email"],
+#loginForm input[type="password"]{
+    width: 90%; /* 設定輸入欄位寬度 */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px; /* 為輸入欄位添加弧形邊框 */
+    
+}
+
+#loginForm button {
+    padding: 10px 20px;
+    border-radius: 10px; /* 為按鈕添加弧形邊框 */
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px; /* 添加下邊距 */
+}
+
+#loginForm input[type="file"]{
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: black;
+    background-color: white;
+    border: black;
+    margin-bottom: 20px;
+}
+
+#loginForm select[name="rowSelect"],
+#loginForm select[name="marchartId"]{
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: black;
+    background-color: white;
+    border: black;
+    margin-bottom: 20px;
+}
+
+#loginForm button:hover {
+    background-color: #0056b3;
+}
+
+
+#loginForm p {
+    text-align: center; /* 設定段落文字置中 */
+}
+
+#loginForm a {
+    color: #007bff; /* 設定連結顏色 */
+    text-decoration: none; /* 移除連結下劃線 */
+}
+
+#loginForm a:hover {
+    text-decoration: underline; /* 設定連結懸停時添加下劃線 */
+}
+
+#success_message {
+    text-align: center;
+    color: green;
+    margin-top: 10px; /* 設定與上方元素的間距 */
+}
+
+#fail_message {
+    text-align: center;
+    color: red;
+    margin-top: 10px; /* 設定與上方元素的間距 */
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-container form {
+    display: flex;
+    width: 80%;
+    max-width: 800px;
+}
+
+.search-container input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+#page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.modal-body img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;  /* 設定寬度為100%，使圖片自適應父容器寬度 */
+    height: auto;  /* 設定高度為自動，以保持圖片的寬高比 */
+    max-width: 500px;  /* 設定圖片的最大寬度，避免圖片過大 */
+    box-sizing: border-box;  /* 包括內邊距和邊框在內的總寬度 */
+}
+
+#favoriteButton {
+    position: absolute;  /* 使用絕對定位 */
+    right: 10px;      /* 距離右邊20像素 */
+    bottom: 10px;     /* 距離底部20像素 */
+    padding: 10px 15px;    /* 按鈕內邊距 */
+    background-color: #ff0000;  /* 背景色為紅色 */
+    color: #ffffff;   /* 文字顏色為白色 */
+    border: none;     /* 無邊框 */
+    cursor: pointer;  /* 滑鼠懸停時為手指形狀 */
+    border-radius: 10px; /* 為按鈕添加弧形邊框 */
+}
+
+
+#favoriteButton:before {
+    content: "♥";  /* 使用心形符號 */
+    font-size: 20px;  /* 字體大小 */
+}
+
+#unfavoriteButton {
+    position: absolute;  /* 使用絕對定位 */
+    right: 10px;      /* 距離右邊20像素 */
+    bottom: 10px;     /* 距離底部20像素 */
+    padding: 10px 15px;    /* 按鈕內邊距 */
+    
+    background-color: #ff0000;  /* 背景色為紅色 */
+    color: #ffffff;   /* 文字顏色為白色 */
+    border: none;     /* 無邊框 */
+    cursor: pointer;  /* 滑鼠懸停時為手指形狀 */
+    border-radius: 10px; /* 為按鈕添加弧形邊框 */
+}
+
+#unfavoriteButton:before {
+    content: "♥";  /* 使用心形符號 */
+    font-size: 20px;  /* 字體大小 */
+}
+
+#social_icon {
+    width: 40px;
+    border-radius: 20px;
+}
